@@ -1,0 +1,8 @@
+env: local
+kafka:
+  bootstrapServers: "localhost:9092"
+  topics:
+    pageContext: "page_context"
+mongo:
+  uri: "${MONGO_URI}"
+  database: "realtime_ads"
