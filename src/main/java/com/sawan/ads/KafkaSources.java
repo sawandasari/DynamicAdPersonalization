@@ -16,6 +16,6 @@ public class KafkaSources {
                 .setStartingOffsets(OffsetsInitializer.latest())
                 .setValueOnlyDeserializer(new SimpleStringSchema())
                 .build();
-        return env.fromSource(src, WatermarkStrategy.noWatermarks(), "Kafka Page Context");
+        return env.fromSource(src, WatermarkStrategy.noWatermarks(), Constants.Kafka.SOURCE_PAGE_CONTEXT_OP_NAME);
     }
 }
